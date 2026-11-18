@@ -81,16 +81,16 @@
          * If the box drifts off the screen, turn it around!
          */
         function update() {
-          positionX += speed;
           moveBoxTo(positionX);
-        
+          positionX += speed;
+          
           //checks and balances
           if (positionX > boardWidth) {
             speed = speed * -1;
           }
 
           if (positionX < 0){
-            speed *= -1
+            speed *= -1;
           }
           
         }
@@ -106,9 +106,8 @@
           positionX = 0;
           ++points;
           changeBoxText(points);
-          positionX += 3
-
-
+          ++points;
+          positionX += 3;
         }
 
 
